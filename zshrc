@@ -59,9 +59,20 @@ export PATH="/usr/local/bin:/usr/local/sbin:/bin:/usr/bin:/sbin:/Library/Framewo
 # export MANPATH="/usr/local/man:$MANPATH"
 ### GO
 export GOPATH="/Users/iPersona/Documents/dev/go"
+
+### rust
+CARGO_HOME="/Users/iPersona/.cargo"
+export PATH=$PATH:$CARGO_HOME/bin
+# 设置环境变量 RUSTUP_DIST_SERVER(用于更新 toolchain)
+export RUSTUP_DIST_SERVER="https://mirrors.ustc.edu.cn/rust-static"
+# 以及 RUSTUP_update_ROOT(用于更新 rustup)
+export RUSTUP_UPDATE_ROOT="https://mirrors.ustc.edu.cn/rust-static/rustup"
+
+
 ### MY TOOLS
 MY_TOOLS=$HOME/Documents/dev/bin
 export PATH=$PATH:$MY_TOOLS
+
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -87,3 +98,4 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
