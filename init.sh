@@ -11,9 +11,13 @@
 # symbol link to ~/.zshrc
 shortcut=~/.zshrc
 if [ -L $shortcut ]; then
+  echo "removing old shortcut..."
   rm $shortcut
 fi
-ln -s ~/.my-zshrc/zshrc $shortcut
+echo "creating new shortcut..."
+ln -s $PWD/zshrc $shortcut
 
 # reload config
+echo "applying new configuration..."
 source $shortcut
+echo "finished!"
